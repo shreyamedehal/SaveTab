@@ -5,10 +5,9 @@ const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 const tabBtn = document.getElementById("save-tab")
 
-//get the leads from local storage 
+//get leads from local storage 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
-//even if we refresh leads are intact on the page
 if(leadsFromLocalStorage){
     myLeads = leadsFromLocalStorage
     render(myLeads)
@@ -22,11 +21,10 @@ tabBtn.addEventListener("click", function(){
     })
 })
 
-//listen to the double clicks on the delete btn
 deleteBtn.addEventListener("dblclick",function(){
     localStorage.clear()
     myLeads=[]
-    render(myLeads) //because myLeads is an empty array
+    render(myLeads)
 })
 
 inputbtn.addEventListener("click", function () {
