@@ -40,3 +40,7 @@ li{
 li a{
     color: rgb(97 12 100);
 }
+
+#input-btn{
+    margin-left: 50px;
+}
